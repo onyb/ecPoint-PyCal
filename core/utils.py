@@ -29,7 +29,4 @@ def sanitize_path(path: str) -> str:
         host, local = binding.split(":")
         path = path.replace(host, local)
 
-    # Kept for backwards compatibility.
-    return path.replace(
-        os.environ["HOST_HOME"], "/home"
-    ).replace(os.environ["HOST_MEDIA"], "/media")
+    return path
